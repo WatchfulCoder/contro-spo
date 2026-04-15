@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,7 +109,9 @@
     }
 
     @media (max-width: 580px) {
-      .entretien-meta { grid-template-columns: 1fr; }
+      .entretien-meta {
+        grid-template-columns: 1fr;
+      }
     }
 
     .entretien-meta-item {
@@ -194,332 +197,340 @@
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <a class="nav-logo" href="index.html">Controverse numérique · IDF</a>
-  <ul class="nav-links">
-    <li><a href="index.html">Introduction</a></li>
-    <li><a href="chronologie.html">Chronologie</a></li>
-    <li><a href="acteurs.html">Acteurs</a></li>
-    <li><a href="noeuds.html">Nœuds</a></li>
-    <li><a href="conclusion.html">Conclusion</a></li>
-    <li><a href="bibliographie.html">Sources</a></li>
-  </ul>
-</nav>
+  <nav>
+    <a class="nav-logo" href="index.html">Controverse numérique · IDF</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Introduction</a></li>
+      <li><a href="chronologie.html">Chronologie</a></li>
+      <li><a href="acteurs.html">Acteurs</a></li>
+      <li><a href="noeuds.html">Nœuds</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      <li><a href="bibliographie.html">Sources</a></li>
+    </ul>
+  </nav>
 
-<!-- ===== ÉCRAN MOT DE PASSE ===== -->
-<div id="pw-screen">
-  <div class="pw-box">
-    <span class="pw-label">Accès restreint · Évaluateurs uniquement</span>
-    <h2>Transcriptions des entretiens</h2>
-    <p>Ces transcriptions sont confidentielles. Elles sont accessibles aux encadrants et évaluateurs du cours sur communication du mot de passe.</p>
-    <div class="pw-form">
-      <input type="password" id="pw-input" placeholder="Mot de passe" autocomplete="off">
-      <button onclick="checkPassword()">Accéder</button>
+  <!-- ===== ÉCRAN MOT DE PASSE ===== -->
+  <div id="pw-screen">
+    <div class="pw-box">
+      <span class="pw-label">Accès restreint · Évaluateurs uniquement</span>
+      <h2>Transcriptions des entretiens</h2>
+      <p>Ces transcriptions sont confidentielles. Elles sont accessibles aux encadrants et évaluateurs du cours sur
+        communication du mot de passe.</p>
+      <div class="pw-form">
+        <input type="password" id="pw-input" placeholder="Mot de passe" autocomplete="off">
+        <button onclick="checkPassword()">Accéder</button>
+      </div>
+      <p class="pw-error" id="pw-error">Mot de passe incorrect.</p>
     </div>
-    <p class="pw-error" id="pw-error">Mot de passe incorrect.</p>
-  </div>
-</div>
-
-<!-- ===== CONTENU PROTÉGÉ ===== -->
-<div id="protected-content">
-
-  <div class="confidentiel-banner">
-    ⚠ Document confidentiel · Usage évaluatif uniquement · Ne pas diffuser
   </div>
 
-  <div class="page-layout">
+  <!-- ===== CONTENU PROTÉGÉ ===== -->
+  <div id="protected-content">
 
-    <aside class="sidebar">
-      <div class="sidebar-label">Entretiens</div>
-      <ul class="sidebar-nav">
-        <li><button class="entretien-btn active" data-tab="ent1">ENT-01<br>Région IDF</button></li>
-        <li><button class="entretien-btn" data-tab="ent2">ENT-02<br>V. Bouvet — Éditeurs</button></li>
-        <li><button class="entretien-btn" data-tab="ent3">ENT-03<br>Professeure de SVT</button></li>
-        <li><button class="entretien-btn" data-tab="ent4">ENT-04<br>Proviseur de lycée</button></li>
-        <li><button class="entretien-btn" data-tab="ent5">ENT-05<br>Opposante GaucheCom</button></li>
-      </ul>
-    </aside>
-
-    <main>
-
-      <h1>Transcriptions des entretiens</h1>
-      <p>Cinq entretiens ont été conduits entre [DATE DÉBUT] et [DATE FIN] avec des acteurs représentatifs des différents camps de la controverse. Les transcriptions sont intégrales. Les passages entre crochets signalent des inaudibles ou des corrections de reformulation.</p>
-
-      <!-- ===== ENTRETIEN 1 ===== -->
-      <div class="tab-panel active" id="tab-ent1">
-
-        <div class="entretien-meta">
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Interviewé(e)</span>
-            <span class="entretien-meta-val">[PRÉNOM NOM], [titre et fonction], Région Île-de-France</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Date</span>
-            <span class="entretien-meta-val">[DATE]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Format</span>
-            <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Camp</span>
-            <span class="entretien-meta-val">Région IDF — porteur de la politique</span>
-          </div>
-        </div>
-
-        <div class="transcript">
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 1 — ex : Pouvez-vous nous expliquer la genèse de la décision de passer à Pearltrees comme outil unique ?]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-01</div>
-            <div class="tour-texte">[RÉPONSE — coller ici la transcription intégrale]</div>
-          </div>
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 2]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-01</div>
-            <div class="tour-texte">[RÉPONSE]</div>
-          </div>
-
-          <!-- Répéter ce bloc pour chaque tour de parole -->
-
-        </div>
-      </div>
-
-      <!-- ===== ENTRETIEN 2 ===== -->
-      <div class="tab-panel" id="tab-ent2">
-
-        <div class="entretien-meta">
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Interviewé(e)</span>
-            <span class="entretien-meta-val">Valentin Bouvet, directeur général de lelivrescolaire.fr (Hachette)</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Date</span>
-            <span class="entretien-meta-val">[DATE]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Format</span>
-            <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Camp</span>
-            <span class="entretien-meta-val">Éditeurs scolaires — opposition juridique et pédagogique</span>
-          </div>
-        </div>
-
-        <div class="transcript">
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 1]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-02</div>
-            <div class="tour-texte">[RÉPONSE]</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ===== ENTRETIEN 3 ===== -->
-      <div class="tab-panel" id="tab-ent3">
-
-        <div class="entretien-meta">
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Interviewé(e)</span>
-            <span class="entretien-meta-val">[PRÉNOM NOM], professeure de SVT, lycée [NOM], [ville]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Date</span>
-            <span class="entretien-meta-val">[DATE]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Format</span>
-            <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Camp</span>
-            <span class="entretien-meta-val">Enseignants — témoignage de terrain</span>
-          </div>
-        </div>
-
-        <div class="transcript">
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 1]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-03</div>
-            <div class="tour-texte">[RÉPONSE]</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ===== ENTRETIEN 4 ===== -->
-      <div class="tab-panel" id="tab-ent4">
-
-        <div class="entretien-meta">
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Interviewé(e)</span>
-            <span class="entretien-meta-val">[PRÉNOM NOM], proviseur, lycée [NOM], [ville]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Date</span>
-            <span class="entretien-meta-val">[DATE]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Format</span>
-            <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Camp</span>
-            <span class="entretien-meta-val">Chefs d'établissement — acteurs de mise en œuvre</span>
-          </div>
-        </div>
-
-        <div class="transcript">
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 1]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-04</div>
-            <div class="tour-texte">[RÉPONSE]</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ===== ENTRETIEN 5 ===== -->
-      <div class="tab-panel" id="tab-ent5">
-
-        <div class="entretien-meta">
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Interviewé(e)</span>
-            <span class="entretien-meta-val">[PRÉNOM NOM], élue, Groupe Gauche Communiste Écologiste et Citoyenne, Conseil régional IDF</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Date</span>
-            <span class="entretien-meta-val">[DATE]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Format</span>
-            <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
-          </div>
-          <div class="entretien-meta-item">
-            <span class="entretien-meta-label">Camp</span>
-            <span class="entretien-meta-val">Opposition régionale — critique institutionnelle</span>
-          </div>
-        </div>
-
-        <div class="transcript">
-
-          <div class="tour interviewer">
-            <div class="tour-locuteur interviewer">Enquêteurs</div>
-            <div class="tour-texte">[QUESTION 1]</div>
-          </div>
-
-          <div class="tour interviewe">
-            <div class="tour-locuteur interviewe">ENT-05</div>
-            <div class="tour-texte">[RÉPONSE]</div>
-          </div>
-
-        </div>
-      </div>
-
-    </main>
-  </div>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <div class="footer-logo-placeholder">LOGO<br>SciencesPo</div>
-      </div>
-      <div class="footer-info">
-        <strong>[PRÉNOM NOM] &amp; [PRÉNOM NOM]</strong>
-        Politiques numériques des collectivités locales · École d&#39;Affaires Publiques · Sciences Po<br>
-        Cartographie de la controverse Pearltrees / manuels tout-numérique, lycées IDF
-      </div>
-      <div class="footer-meta">
-        Rendu le [DATE]<br>
-        Encadrement : Valérie Peugeot<br>
-        &amp; Régis Chatellier<br>
-        <span style="opacity:0.4;font-size:10px;">Site réalisé avec l&#39;assistance de Claude (Anthropic)</span>
-      </div>
+    <div class="confidentiel-banner">
+      ⚠ Document confidentiel · Usage évaluatif uniquement · Ne pas diffuser
     </div>
-  </footer>
 
-</div><!-- fin #protected-content -->
+    <div class="page-layout">
 
-<script>
-// ===== MOT DE PASSE =====
-// Change "MOTDEPASSE" par le mot de passe que tu veux communiquer aux évaluateurs
-var MOT_DE_PASSE = "MOTDEPASSE";
+      <aside class="sidebar">
+        <div class="sidebar-label">Entretiens</div>
+        <ul class="sidebar-nav">
+          <li><button class="entretien-btn active" data-tab="ent1">ENT-01<br>Région IDF</button></li>
+          <li><button class="entretien-btn" data-tab="ent2">ENT-02<br>V. Bouvet — Éditeurs</button></li>
+          <li><button class="entretien-btn" data-tab="ent3">ENT-03<br>Professeure de SVT</button></li>
+          <li><button class="entretien-btn" data-tab="ent4">ENT-04<br>Proviseur de lycée</button></li>
+          <li><button class="entretien-btn" data-tab="ent5">ENT-05<br>Opposante GaucheCom</button></li>
+        </ul>
+      </aside>
 
-function checkPassword() {
-  var val = document.getElementById('pw-input').value;
-  if (val === MOT_DE_PASSE) {
-    document.getElementById('pw-screen').style.display = 'none';
-    document.getElementById('protected-content').style.display = 'block';
-    sessionStorage.setItem('ent_auth', '1');
-  } else {
-    document.getElementById('pw-error').style.display = 'block';
-    document.getElementById('pw-input').value = '';
-    document.getElementById('pw-input').focus();
-  }
-}
+      <main>
 
-// Permettre la touche Entrée
-document.getElementById('pw-input').addEventListener('keydown', function (e) {
-  if (e.key === 'Enter') checkPassword();
-});
+        <h1>Transcriptions des entretiens</h1>
+        <p>Cinq entretiens ont été conduits entre [DATE DÉBUT] et [DATE FIN] avec des acteurs représentatifs des
+          différents camps de la controverse. Les transcriptions sont intégrales. Les passages entre crochets signalent
+          des inaudibles ou des corrections de reformulation.</p>
 
-// Maintenir la session si déjà authentifié
-if (sessionStorage.getItem('ent_auth') === '1') {
-  document.getElementById('pw-screen').style.display = 'none';
-  document.getElementById('protected-content').style.display = 'block';
-}
+        <!-- ===== ENTRETIEN 1 ===== -->
+        <div class="tab-panel active" id="tab-ent1">
 
-// ===== ONGLETS ENTRETIENS =====
-(function () {
-  var tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
-  var tabPanels = document.querySelectorAll('.tab-panel');
+          <div class="entretien-meta">
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Interviewé(e)</span>
+              <span class="entretien-meta-val">[PRÉNOM NOM], [titre et fonction], Région Île-de-France</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Date</span>
+              <span class="entretien-meta-val">[DATE]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Format</span>
+              <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Camp</span>
+              <span class="entretien-meta-val">Région IDF — porteur de la politique</span>
+            </div>
+          </div>
 
-  tabBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var target = btn.dataset.tab;
+          <div class="transcript">
 
-      tabBtns.forEach(function(b){ b.classList.remove('active'); });
-      tabPanels.forEach(function(p){ p.classList.remove('active'); });
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 1 — ex : Pouvez-vous nous expliquer la genèse de la décision de passer à
+                Pearltrees comme outil unique ?]</div>
+            </div>
 
-      btn.classList.add('active');
-      var panel = document.getElementById('tab-' + target);
-      if (panel) panel.classList.add('active');
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-01</div>
+              <div class="tour-texte">[RÉPONSE — coller ici la transcription intégrale]</div>
+            </div>
 
-      // Scroll vers le haut du contenu
-      var top = document.querySelector('h1').getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 2]</div>
+            </div>
+
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-01</div>
+              <div class="tour-texte">[RÉPONSE]</div>
+            </div>
+
+            <!-- Répéter ce bloc pour chaque tour de parole -->
+
+          </div>
+        </div>
+
+        <!-- ===== ENTRETIEN 2 ===== -->
+        <div class="tab-panel" id="tab-ent2">
+
+          <div class="entretien-meta">
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Interviewé(e)</span>
+              <span class="entretien-meta-val">Valentin Bouvet, directeur général de lelivrescolaire.fr
+                (Hachette)</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Date</span>
+              <span class="entretien-meta-val">[DATE]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Format</span>
+              <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Camp</span>
+              <span class="entretien-meta-val">Éditeurs scolaires — opposition juridique et pédagogique</span>
+            </div>
+          </div>
+
+          <div class="transcript">
+
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 1]</div>
+            </div>
+
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-02</div>
+              <div class="tour-texte">[RÉPONSE]</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== ENTRETIEN 3 ===== -->
+        <div class="tab-panel" id="tab-ent3">
+
+          <div class="entretien-meta">
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Interviewé(e)</span>
+              <span class="entretien-meta-val">[PRÉNOM NOM], professeure de SVT, lycée [NOM], [ville]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Date</span>
+              <span class="entretien-meta-val">[DATE]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Format</span>
+              <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Camp</span>
+              <span class="entretien-meta-val">Enseignants — témoignage de terrain</span>
+            </div>
+          </div>
+
+          <div class="transcript">
+
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 1]</div>
+            </div>
+
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-03</div>
+              <div class="tour-texte">[RÉPONSE]</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== ENTRETIEN 4 ===== -->
+        <div class="tab-panel" id="tab-ent4">
+
+          <div class="entretien-meta">
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Interviewé(e)</span>
+              <span class="entretien-meta-val">[PRÉNOM NOM], proviseur, lycée [NOM], [ville]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Date</span>
+              <span class="entretien-meta-val">[DATE]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Format</span>
+              <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Camp</span>
+              <span class="entretien-meta-val">Chefs d'établissement — acteurs de mise en œuvre</span>
+            </div>
+          </div>
+
+          <div class="transcript">
+
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 1]</div>
+            </div>
+
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-04</div>
+              <div class="tour-texte">[RÉPONSE]</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== ENTRETIEN 5 ===== -->
+        <div class="tab-panel" id="tab-ent5">
+
+          <div class="entretien-meta">
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Interviewé(e)</span>
+              <span class="entretien-meta-val">[PRÉNOM NOM], élue, Groupe Gauche Communiste Écologiste et Citoyenne,
+                Conseil régional IDF</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Date</span>
+              <span class="entretien-meta-val">[DATE]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Format</span>
+              <span class="entretien-meta-val">[Visioconférence / Téléphone / Présentiel], [durée]</span>
+            </div>
+            <div class="entretien-meta-item">
+              <span class="entretien-meta-label">Camp</span>
+              <span class="entretien-meta-val">Opposition régionale — critique institutionnelle</span>
+            </div>
+          </div>
+
+          <div class="transcript">
+
+            <div class="tour interviewer">
+              <div class="tour-locuteur interviewer">Enquêteurs</div>
+              <div class="tour-texte">[QUESTION 1]</div>
+            </div>
+
+            <div class="tour interviewe">
+              <div class="tour-locuteur interviewe">ENT-05</div>
+              <div class="tour-texte">[RÉPONSE]</div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="footer-logo-placeholder">LOGO<br>SciencesPo</div>
+        </div>
+        <div class="footer-info">
+          <strong>[PRÉNOM NOM] &amp; [PRÉNOM NOM]</strong>
+          Politiques numériques des collectivités locales · École d&#39;Affaires Publiques · Sciences Po<br>
+          Cartographie de la controverse Pearltrees / manuels tout-numérique, lycées IDF
+        </div>
+        <div class="footer-meta">
+          Rendu le [DATE]<br>
+          Encadrement : Valérie Peugeot<br>
+          &amp; Régis Chatellier<br>
+          <span style="opacity:0.4;font-size:10px;">Site réalisé avec l&#39;assistance de Claude (Anthropic)</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- fin #protected-content -->
+
+  <script>
+    // ===== MOT DE PASSE =====
+    // Change "MOTDEPASSE" par le mot de passe que tu veux communiquer aux évaluateurs
+    var MOT_DE_PASSE = "ControSpo2526";
+
+    function checkPassword() {
+      var val = document.getElementById('pw-input').value;
+      if (val === MOT_DE_PASSE) {
+        document.getElementById('pw-screen').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+        sessionStorage.setItem('ent_auth', '1');
+      } else {
+        document.getElementById('pw-error').style.display = 'block';
+        document.getElementById('pw-input').value = '';
+        document.getElementById('pw-input').focus();
+      }
+    }
+
+    // Permettre la touche Entrée
+    document.getElementById('pw-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') checkPassword();
     });
-  });
-})();
-</script>
+
+    // Maintenir la session si déjà authentifié
+    if (sessionStorage.getItem('ent_auth') === '1') {
+      document.getElementById('pw-screen').style.display = 'none';
+      document.getElementById('protected-content').style.display = 'block';
+    }
+
+    // ===== ONGLETS ENTRETIENS =====
+    (function () {
+      var tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
+      var tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.dataset.tab;
+
+          tabBtns.forEach(function (b) { b.classList.remove('active'); });
+          tabPanels.forEach(function (p) { p.classList.remove('active'); });
+
+          btn.classList.add('active');
+          var panel = document.getElementById('tab-' + target);
+          if (panel) panel.classList.add('active');
+
+          // Scroll vers le haut du contenu
+          var top = document.querySelector('h1').getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
 
 </body>
+
 </html>
