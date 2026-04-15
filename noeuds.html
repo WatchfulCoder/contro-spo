@@ -47,31 +47,158 @@
 
         <!-- NOEUD 1 -->
         <div class="tab-panel active" id="tab-noeud1">
-          <h2>La Gouvernance des contenus</h2>
+          <h2>La Région comme éditeur</h2>
+
+          <!-- TENSION CENTRALE -->
           <div class="noeud">
-            <div class="noeud-label">Question centrale</div>
-            <h4>La Région est compétente sur les lycées (bâtiments, équipements, manuels) mais les programmes et la
-              pédagogie relèvent de l'Éducation nationale. Pearltrees brouille cette frontière.</h4>
+            <div class="noeud-label">Glissement de compétence</div>
+            <h4>La Région est légalement compétente sur la fourniture des manuels — pas sur leur contenu. Pearltrees lui
+              donne un levier éditorial qu'elle affirme ne pas exercer, mais que le cahier des charges du marché public
+              lui confère explicitement.</h4>
           </div>
 
-          <h3>Position de la Région</h3>
           <p>
-            Les manuels libres sont produits par des inspecteurs et enseignants de l'Éducation nationale, validés par
-            les corps d'inspection. La Région n'intervient ni dans le choix des sujets ni dans la validation des
-            contenus. Le processus est présenté comme identique à celui de l'édition scolaire classique.
-          </p>
-          <p>[À ENRICHIR AVEC L'ENTRETIEN RÉGION]</p>
-
-          <h3>Position des éditeurs et de l'opposition</h3>
-          <p>
-            Le cahier des charges du marché public permet à la Région et à Pearltrees de retirer des contenus jugés
-            inappropriés — s'octroyant ainsi un pouvoir de contrôle éditorial inédit pour une collectivité
-            territoriale.<sup><a href="bibliographie.html#n1">[1]</a></sup> Les éditeurs citent l'exemple d'un manuel
-            d'histoire libre où le nazisme était illustré par une photo d'Elon Musk — une allégation signalée par
-            Valentin Bouvet lors de la conférence de presse du 28 août 2025, qui témoigne selon eux d'un recours
-            maladroit à l'intelligence artificielle.
+            La compétence des régions sur les lycées est définie par la loi de décentralisation de 1983 : elle couvre
+            les bâtiments, l'entretien, les équipements — dont les manuels scolaires, financés par la collectivité. Les
+            programmes, les méthodes, la validation des contenus pédagogiques relèvent exclusivement de l'Éducation
+            nationale. C'est cette frontière que la controverse met en cause : en commandant et en hébergeant une
+            plateforme de contenus pédagogiques, la Région a-t-elle franchi la ligne ?
           </p>
 
+          <!-- SCHÉMA DE COMPÉTENCES — qui fait quoi -->
+          <h3>La frontière de compétence en question</h3>
+          <p>Le nœud tient à la distinction entre deux rôles que Pearltrees rend difficiles à séparer. Clique sur chaque
+            bloc pour comprendre pourquoi la frontière est contestée.</p>
+
+          <div class="n1-schema">
+            <!-- Colonne Région -->
+            <div class="n1-col">
+              <div class="n1-col-header n1-col-region">
+                <span class="acteur-camp pour">Région IDF</span>
+                <strong>Ce qu'elle dit faire</strong>
+              </div>
+              <div class="n1-bloc n1-bloc-region n1-actif" data-detail="financement">
+                <div class="n1-bloc-titre">Financer les manuels</div>
+                <div class="n1-bloc-sous">Compétence légale établie</div>
+              </div>
+              <div class="n1-bloc n1-bloc-region" data-detail="plateforme">
+                <div class="n1-bloc-titre">Commander la plateforme</div>
+                <div class="n1-bloc-sous">Marché public, 18 M€</div>
+              </div>
+              <div class="n1-bloc n1-bloc-region" data-detail="cahier">
+                <div class="n1-bloc-titre">Définir le cahier des charges</div>
+                <div class="n1-bloc-sous">Conditions d'usage et de retrait</div>
+              </div>
+            </div>
+
+            <!-- Colonne zone grise -->
+            <div class="n1-col n1-col-grise">
+              <div class="n1-col-header n1-col-gris">
+                <span class="acteur-camp neutre">Zone disputée</span>
+                <strong>Ce que Pearltrees rend flou</strong>
+              </div>
+              <div class="n1-bloc n1-bloc-neutre" data-detail="retrait">
+                <div class="n1-bloc-titre">Retirer des contenus</div>
+                <div class="n1-bloc-sous">Prévu au contrat</div>
+              </div>
+              <div class="n1-bloc n1-bloc-neutre" data-detail="hebergement">
+                <div class="n1-bloc-titre">Héberger &amp; référencer</div>
+                <div class="n1-bloc-sous">Visibilité algorithmique</div>
+              </div>
+              <div class="n1-bloc n1-bloc-neutre" data-detail="lockin">
+                <div class="n1-bloc-titre">Lier les enseignants</div>
+                <div class="n1-bloc-sous">Lock-in de fait</div>
+              </div>
+            </div>
+
+            <!-- Colonne Éducation nationale -->
+            <div class="n1-col">
+              <div class="n1-col-header n1-col-en">
+                <span class="acteur-camp contre">Éducation nationale</span>
+                <strong>Ce qui lui appartient</strong>
+              </div>
+              <div class="n1-bloc n1-bloc-en" data-detail="programmes">
+                <div class="n1-bloc-titre">Définir les programmes</div>
+                <div class="n1-bloc-sous">Compétence exclusive</div>
+              </div>
+              <div class="n1-bloc n1-bloc-en" data-detail="validation">
+                <div class="n1-bloc-titre">Valider les contenus</div>
+                <div class="n1-bloc-sous">Corps d'inspection</div>
+              </div>
+              <div class="n1-bloc n1-bloc-en" data-detail="methodes">
+                <div class="n1-bloc-titre">Encadrer les méthodes</div>
+                <div class="n1-bloc-sous">Liberté pédagogique</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panneau de détail dynamique -->
+          <div class="n1-detail-panel" id="n1-detail">
+            <div class="n1-detail-contenu" id="n1-detail-texte">
+              <div data-key="financement" class="n1-detail-item active">
+                <strong>Financer les manuels</strong> — compétence légale incontestée depuis 1986. La Région IDF
+                dépensait environ 75 € par élève et par an pour des manuels papier achetés aux éditeurs. Pearltrees
+                réduit ce budget à 16 €. <span class="n1-placeholder">[À préciser avec les sources budgétaires de la
+                  Région]</span>
+              </div>
+              <div data-key="plateforme" class="n1-detail-item">
+                <strong>Commander la plateforme</strong> — Pearltrees (filiale de Mondadori France) est titulaire d'un
+                marché public de 18 millions d'euros pour la période 2023–2027.<sup><a
+                    href="bibliographie.html#n2">[2]</a></sup> Le marché couvre l'hébergement, le développement et la
+                maintenance de la plateforme. <span class="n1-placeholder">[À enrichir : conditions exactes du marché,
+                  clause de renouvellement ?]</span>
+              </div>
+              <div data-key="cahier" class="n1-detail-item">
+                <strong>Définir le cahier des charges</strong> — c'est ici que la controverse juridique prend corps. Le
+                cahier des charges prévoit explicitement que la Région et Pearltrees peuvent retirer des contenus «
+                jugés inappropriés ». Qui juge ? Selon quel critère ? La réponse n'est pas dans le document public.
+                <span class="n1-placeholder">[À enrichir avec l'entretien Région : qui décide concrètement ?]</span>
+              </div>
+              <div data-key="retrait" class="n1-detail-item">
+                <strong>Retirer des contenus</strong> — pouvoir éditorial inédit pour une collectivité territoriale. Les
+                éditeurs citent l'exemple du manuel d'histoire où le nazisme était illustré par une photo d'Elon Musk,
+                signalé par Valentin Bouvet le 28 août 2025 : selon eux, preuve d'un recours à l'IA sans supervision
+                éditoriale sérieuse. <span class="n1-placeholder">[À croiser avec l'entretien éditeurs : ont-ils
+                  d'autres exemples documentés ?]</span>
+              </div>
+              <div data-key="hebergement" class="n1-detail-item">
+                <strong>Héberger et référencer</strong> — Pearltrees organise la visibilité des contenus via son
+                algorithme de recommandation. Un contenu bien référencé sera davantage utilisé qu'un contenu enfoui.
+                Cette logique de mise en avant est une forme de sélection éditoriale que ni la Région ni Pearltrees ne
+                présentent comme telle. <span class="n1-placeholder">[À enrichir avec les entretiens enseignants :
+                  comment découvrent-ils les ressources ?]</span>
+              </div>
+              <div data-key="lockin" class="n1-detail-item">
+                <strong>Lier les enseignants par le lock-in</strong> — si Pearltrees disparaît, change de modèle ou
+                augmente ses tarifs, la Région se retrouve sans alternative immédiate. Ce risque de dépendance est
+                soulevé par l'opposition régionale et correspond précisément à ce que les cours de Valérie Peugeot et
+                Régis Chatellier décrivent comme le danger des « solutions propriétaires ». <span
+                  class="n1-placeholder">[À enrichir avec l'entretien opposition régionale]</span>
+              </div>
+              <div data-key="programmes" class="n1-detail-item">
+                <strong>Définir les programmes</strong> — compétence exclusive du ministère de l'Éducation nationale,
+                définie par le Code de l'éducation. Les manuels libres sont produits par des inspecteurs et des
+                enseignants de l'Éducation nationale, validés par les corps d'inspection. La Région affirme que ce
+                processus est identique à celui de l'édition classique. <span class="n1-placeholder">[À enrichir avec
+                  l'entretien Région : comment la co-production avec l'EN est-elle organisée ?]</span>
+              </div>
+              <div data-key="validation" class="n1-detail-item">
+                <strong>Valider les contenus</strong> — les éditeurs contestent que la validation soit réellement
+                assurée dans le cas des manuels libres. L'exemple Elon Musk est présenté comme une preuve que le
+                processus de relecture est insuffisant ou inexistant. La Région répond que l'exemple a été corrigé
+                immédiatement après signalement. <span class="n1-placeholder">[À enrichir avec les entretiens des deux
+                  camps]</span>
+              </div>
+              <div data-key="methodes" class="n1-detail-item">
+                <strong>Encadrer les méthodes pédagogiques</strong> — en imposant un format de ressources (granulaire,
+                numérique, sur Pearltrees), la Région influe indirectement sur les méthodes sans en avoir la compétence
+                formelle. Ce glissement est au cœur du nœud 2 (liberté pédagogique). <span class="n1-placeholder">→ Voir
+                  le nœud 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CITATION CENTRALE -->
           <blockquote>
             « Jusqu'à ce matin, dans un manuel d'Histoire "libre", le nazisme était illustré par une image d'Elon Musk.
             Cela pose la question de l'orientation politique que souhaite donner la collectivité aux programmes
@@ -79,23 +206,218 @@
             <cite>— Valentin Bouvet, France 3 IDF, 3 septembre 2025</cite>
           </blockquote>
 
-          <h3>Sous-nœud — dépendance à un prestataire privé</h3>
           <p>
-            Pearltrees est une entreprise privée titulaire d'un marché de 18 millions d'euros pour 2023–2027.<sup><a
+            La Région répond que l'image a été retirée dans la journée après signalement — et que ce type d'incident
+            existe aussi dans l'édition classique. Pour les critiques, la rapidité du retrait illustre précisément le
+            problème : <em>qui a le pouvoir de retirer, et selon quel critère ?</em>
+          </p>
+          <div class="n1-placeholder-bloc">[À enrichir avec la position Région sur cet incident + éventuelles autres
+            erreurs documentées dans les manuels libres]</div>
+
+          <!-- SOUS-NŒUD LOCK-IN — dépliable -->
+          <h3>Sous-nœud — la dépendance à un prestataire privé</h3>
+          <p>
+            La question de la gouvernance ne concerne pas seulement qui contrôle les contenus aujourd'hui, mais qui les
+            contrôlera demain. Pearltrees est une entreprise privée titulaire d'un marché à terme fixe.<sup><a
                 href="bibliographie.html#n2">[2]</a></sup> La question du lock-in — si l'entreprise disparaît, change de
-            modèle ou augmente ses prix — est soulevée par l'opposition régionale. Cette logique est précisément celle
-            que décrit le cours de Valérie Peugeot et Régis Chatellier : "des solutions propriétaires, qui créent une
-            dépendance".
+            modèle économique ou augmente ses prix après 2027 — est soulevée par l'opposition régionale mais peu
+            documentée publiquement.
           </p>
 
+          <details class="n2-details">
+            <summary>
+              <span class="encadre-titre" style="display:inline;">Repère analytique</span>
+              &nbsp;Qu'est-ce qu'un lock-in numérique dans une collectivité ?
+            </summary>
+            <div class="n2-details-contenu">
+              <p>Le concept de <em>vendor lock-in</em> désigne la situation dans laquelle un client devient
+                structurellement dépendant d'un fournisseur : les coûts de migration (données, formations, habitudes)
+                rendent le changement prohibitif, même si une alternative meilleure ou moins chère existe.</p>
+              <p>Dans le cas d'une collectivité territoriale, le risque est amplifié par trois facteurs : l'horizon
+                politique court (le marché court jusqu'en 2027, mais les élèves resteront formés à cet outil bien
+                au-delà), la difficulté à constituer une expertise technique interne, et la pression budgétaire qui rend
+                la renégociation difficile.</p>
+              <p>C'est précisément la logique que décrivent Valérie Peugeot et Régis Chatellier dans leur cours : les «
+                solutions propriétaires qui créent une dépendance » comme vecteur de perte de souveraineté des acteurs
+                publics.</p>
+              <div class="n1-placeholder-bloc">[À interroger dans les entretiens : la Région a-t-elle une stratégie de
+                sortie prévue après 2027 ? L'opposition a-t-elle chiffré le risque ?]</div>
+            </div>
+          </details>
+
+          <!-- RENVOI INTER-NŒUDS -->
+          <div class="n2-renvoi">
+            <span class="noeud-label" style="display:inline-block;margin-bottom:0.4rem;">Articulation avec le nœud
+              2</span>
+            <p style="margin:0;font-size:14px;">La gouvernance des contenus conditionne directement la <strong>liberté
+                pédagogique</strong> (nœud 2) : si la Région peut retirer des contenus ou orienter leur visibilité, la
+              liberté formelle de l'enseignant à « choisir ses ressources » perd sa substance. Les deux nœuds sont
+              structurellement liés.</p>
+            <button class="page-nav-btn" style="margin-top:0.75rem;font-size:11px;"
+              onclick="document.querySelector('[data-tab=noeud2]').click()">Lire le nœud 2 : Liberté pédagogique
+              →</button>
+          </div>
+
+          <!-- IRRÉDUCTIBLE -->
           <div class="encadre">
             <div class="encadre-titre">Ce qui reste irréductiblement en débat</div>
-            <p>Peut-on confier à une collectivité territoriale le contrôle d'une plateforme pédagogique unique ? Où
-              s'arrête la compétence logistique (fournir des manuels) et où commence la compétence pédagogique (décider
-              de leur contenu et de leur format) ?</p>
+            <p>Peut-on confier à une collectivité territoriale le contrôle effectif d'une plateforme de contenus
+              pédagogiques unique ? Où s'arrête la compétence logistique — fournir des manuels — et où commence la
+              compétence pédagogique — décider de leur contenu, de leur format, de leur visibilité ? La Région affirme
+              que la frontière est respectée ; ses critiques affirment que le dispositif technique la rend indéfendable.
+            </p>
           </div>
 
         </div>
+
+        <!-- STYLES SPÉCIFIQUES NŒUD 1 -->
+        <style>
+          /* Schéma de compétences à 3 colonnes */
+          .n1-schema {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1px;
+            background: var(--gris-clair);
+            border: 1px solid var(--gris-clair);
+            margin: 1.5rem 0 0;
+          }
+
+          .n1-col-header {
+            padding: 0.9rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+          }
+
+          .n1-col-header strong {
+            font-family: var(--font-titre);
+            font-size: 0.95rem;
+            font-style: italic;
+          }
+
+          .n1-col-region {
+            background: var(--pour-doux);
+          }
+
+          .n1-col-gris {
+            background: var(--neutre-doux);
+          }
+
+          .n1-col-en {
+            background: var(--contre-doux);
+          }
+
+          .n1-bloc {
+            background: var(--blanc);
+            padding: 0.85rem 1rem;
+            border-top: 1px solid var(--gris-clair);
+            cursor: pointer;
+            transition: background var(--transition), border-left var(--transition);
+            border-left: 3px solid transparent;
+          }
+
+          .n1-bloc:hover {
+            background: #faf9f7;
+          }
+
+          .n1-bloc.n1-actif {
+            border-left-color: var(--accent);
+            background: var(--accent-doux);
+          }
+
+          .n1-bloc-region.n1-actif {
+            border-left-color: var(--pour);
+            background: var(--pour-doux);
+          }
+
+          .n1-bloc-neutre.n1-actif {
+            border-left-color: var(--neutre);
+            background: var(--neutre-doux);
+          }
+
+          .n1-bloc-en.n1-actif {
+            border-left-color: var(--contre);
+            background: var(--contre-doux);
+          }
+
+          .n1-bloc-titre {
+            font-family: var(--font-corps);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+          }
+
+          .n1-bloc-sous {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.06em;
+            color: var(--gris);
+          }
+
+          /* Panneau de détail sous le schéma */
+          .n1-detail-panel {
+            border: 1px solid var(--gris-clair);
+            border-top: none;
+            background: #faf9f7;
+            margin-bottom: 2rem;
+          }
+
+          .n1-detail-item {
+            display: none;
+            padding: 1.2rem 1.4rem;
+            font-size: 14px;
+            line-height: 1.7;
+          }
+
+          .n1-detail-item.active {
+            display: block;
+          }
+
+          .n1-detail-item strong {
+            font-weight: 500;
+          }
+
+          /* Placeholder inline */
+          .n1-placeholder {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--gris);
+            opacity: 0.7;
+          }
+
+          .n1-placeholder-bloc {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--gris);
+            background: var(--gris-clair);
+            padding: 0.4rem 0.8rem;
+            margin: 0.5rem 0 1.2rem;
+            opacity: 0.75;
+          }
+
+          @media (max-width: 640px) {
+            .n1-schema {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <script>
+          (function () {
+            var blocs = document.querySelectorAll('.n1-bloc');
+            var items = document.querySelectorAll('.n1-detail-item');
+            blocs.forEach(function (bloc) {
+              bloc.addEventListener('click', function () {
+                blocs.forEach(function (b) { b.classList.remove('n1-actif'); });
+                items.forEach(function (i) { i.classList.remove('active'); });
+                bloc.classList.add('n1-actif');
+                var key = bloc.dataset.detail;
+                var item = document.querySelector('.n1-detail-item[data-key="' + key + '"]');
+                if (item) item.classList.add('active');
+              });
+            });
+          })();
+        </script>
 
         <!-- NOEUD 2 -->
         <div class="tab-panel" id="tab-noeud2">
@@ -105,11 +427,15 @@
           <!-- PARADOXE CENTRAL — encadré accrocheur -->
           <div class="noeud">
             <div class="noeud-label">Paradoxe rhétorique central</div>
-            <h4>Les deux camps mobilisent exactement le même argument — « liberté pédagogique » — en sens inverse. C'est le nœud rhétorique le plus révélateur de la controverse.</h4>
+            <h4>Les deux camps mobilisent exactement le même argument — « liberté pédagogique » — en sens inverse. C'est
+              le nœud rhétorique le plus révélateur de la controverse.</h4>
           </div>
 
           <p>
-            La liberté pédagogique est inscrite dans le statut général des fonctionnaires de l'Éducation nationale depuis 1983. Elle désigne le droit de l'enseignant à choisir ses méthodes, ses supports, son organisation du cours — dans le cadre des programmes nationaux. C'est précisément sur ce droit que se cristallise la controverse Pearltrees : la Région affirme l'avoir élargi, les syndicats affirment qu'elle l'a supprimé.
+            La liberté pédagogique est inscrite dans le statut général des fonctionnaires de l'Éducation nationale
+            depuis 1983. Elle désigne le droit de l'enseignant à choisir ses méthodes, ses supports, son organisation du
+            cours — dans le cadre des programmes nationaux. C'est précisément sur ce droit que se cristallise la
+            controverse Pearltrees : la Région affirme l'avoir élargi, les syndicats affirment qu'elle l'a supprimé.
           </p>
 
           <!-- VISUALISATION MIROIR DES POSITIONS -->
@@ -134,13 +460,17 @@
             <div class="n2-paire" data-id="1">
               <div class="n2-arg n2-arg-region">
                 <div class="n2-arg-label">Argument</div>
-                <p>Pearltrees donne aux enseignants la liberté de <em>recomposer leurs cours</em>, d'enrichir les ressources, de personnaliser selon les besoins de leurs élèves. 50 millions de contenus ont été générés par les professeurs sur la plateforme.</p>
+                <p>Pearltrees donne aux enseignants la liberté de <em>recomposer leurs cours</em>, d'enrichir les
+                  ressources, de personnaliser selon les besoins de leurs élèves. 50 millions de contenus ont été
+                  générés par les professeurs sur la plateforme.</p>
                 <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
               </div>
               <div class="n2-fleche">→</div>
               <div class="n2-arg n2-arg-syndicats">
                 <div class="n2-arg-label">Réfutation</div>
-                <p>La liberté est formellement préservée mais <em>matériellement impossible</em> : avec 16 € par élève, financer d'autres supports que les manuels libres est exclu. La liberté de choix sans les moyens du choix n'est pas une liberté.</p>
+                <p>La liberté est formellement préservée mais <em>matériellement impossible</em> : avec 16 € par élève,
+                  financer d'autres supports que les manuels libres est exclu. La liberté de choix sans les moyens du
+                  choix n'est pas une liberté.</p>
                 <div class="n2-placeholder">[À enrichir avec les entretiens syndicats]</div>
               </div>
             </div>
@@ -149,13 +479,16 @@
             <div class="n2-paire" data-id="2">
               <div class="n2-arg n2-arg-region">
                 <div class="n2-arg-label">Argument</div>
-                <p>Les éditeurs privés « coinçaient » les enseignants dans des manuels figés, imposant un fil conducteur unique. Pearltrees libère d'une structure éditoriale imposée de l'extérieur.</p>
+                <p>Les éditeurs privés « coinçaient » les enseignants dans des manuels figés, imposant un fil conducteur
+                  unique. Pearltrees libère d'une structure éditoriale imposée de l'extérieur.</p>
                 <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
               </div>
               <div class="n2-fleche">→</div>
               <div class="n2-arg n2-arg-syndicats">
                 <div class="n2-arg-label">Réfutation</div>
-                <p>Le manuel crée un <em>repère partagé</em> entre élèves d'une même classe et entre classes — une continuité pédagogique qui n'est pas une contrainte mais une ressource. Sa suppression fragmente, elle n'émancipe pas.</p>
+                <p>Le manuel crée un <em>repère partagé</em> entre élèves d'une même classe et entre classes — une
+                  continuité pédagogique qui n'est pas une contrainte mais une ressource. Sa suppression fragmente, elle
+                  n'émancipe pas.</p>
                 <div class="n2-placeholder">[À enrichir avec les entretiens éditeurs]</div>
               </div>
             </div>
@@ -164,13 +497,16 @@
             <div class="n2-paire" data-id="3">
               <div class="n2-arg n2-arg-region">
                 <div class="n2-arg-label">Argument</div>
-                <p>Les enseignants volontaires ont été associés à la construction des manuels libres via des groupes de travail coordonnés avec l'Éducation nationale. La plateforme a été testée avant généralisation.</p>
+                <p>Les enseignants volontaires ont été associés à la construction des manuels libres via des groupes de
+                  travail coordonnés avec l'Éducation nationale. La plateforme a été testée avant généralisation.</p>
                 <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
               </div>
               <div class="n2-fleche">→</div>
               <div class="n2-arg n2-arg-syndicats">
                 <div class="n2-arg-label">Réfutation</div>
-                <p>Les enseignants n'ont pas été consultés — ni en 2022 lors du lancement, ni en 2024 lors du passage à l'obligation. La « co-construction » désigne un groupe restreint de volontaires, non l'ensemble du corps enseignant.</p>
+                <p>Les enseignants n'ont pas été consultés — ni en 2022 lors du lancement, ni en 2024 lors du passage à
+                  l'obligation. La « co-construction » désigne un groupe restreint de volontaires, non l'ensemble du
+                  corps enseignant.</p>
                 <div class="n2-placeholder">[À enrichir avec les entretiens syndicats]</div>
               </div>
             </div>
@@ -198,23 +534,33 @@
           <div class="n2-alerte-methodo">
             <span class="n2-alerte-icone">⚠</span>
             <div>
-              <strong>Source à situer dans la controverse :</strong> Sondage OpinionWay commandé par les <em>Éditeurs d'Éducation</em>, mars 2025 — un acteur engagé contre la politique régionale. La Région conteste la représentativité : 710 répondants sur 40 000 sollicités (taux de réponse : 1,8 %). Ces chiffres sont un argument dans la controverse autant qu'une mesure de celle-ci.
+              <strong>Source à situer dans la controverse :</strong> Sondage OpinionWay commandé par les <em>Éditeurs
+                d'Éducation</em>, mars 2025 — un acteur engagé contre la politique régionale. La Région conteste la
+              représentativité : 710 répondants sur 40 000 sollicités (taux de réponse : 1,8 %). Ces chiffres sont un
+              argument dans la controverse autant qu'une mesure de celle-ci.
             </div>
           </div>
 
           <!-- SOUS-NŒUD : fragmentation cognitive -->
           <h3>Sous-nœud — fragmentation cognitive et format granulaire</h3>
           <p>
-            Derrière la question de la liberté se profile un désaccord plus profond sur ce qu'est apprendre. Le format granulaire de Pearltrees — des ressources courtes, modulaires, recomposables — est présenté par la Région comme une modernisation pédagogique. Les éditeurs y voient une « tiktokisation » des savoirs : une logique de flux qui fragmente la connaissance en unités disjointes, sans progression construite.
+            Derrière la question de la liberté se profile un désaccord plus profond sur ce qu'est apprendre. Le format
+            granulaire de Pearltrees — des ressources courtes, modulaires, recomposables — est présenté par la Région
+            comme une modernisation pédagogique. Les éditeurs y voient une « tiktokisation » des savoirs : une logique
+            de flux qui fragmente la connaissance en unités disjointes, sans progression construite.
           </p>
 
           <blockquote>
-            « Nous ne sommes ni nostalgiques, ni technophobes. Mais nous affirmons que l'éradication du manuel scolaire comme repère partagé est une erreur pédagogique, sociale et démocratique. »
+            « Nous ne sommes ni nostalgiques, ni technophobes. Mais nous affirmons que l'éradication du manuel scolaire
+            comme repère partagé est une erreur pédagogique, sociale et démocratique. »
             <cite>— Collectif de 500 signataires, tribune, <em>Le Monde</em>, 2 septembre 2025</cite>
           </blockquote>
 
           <p>
-            Pearltrees répond que les ressources « peuvent être réorganisées en parcours, à l'infini »<sup><a href="bibliographie.html#n3">[3]</a></sup> — mais cette réorganisation repose entièrement sur l'enseignant, ajoutant une charge de travail invisible que les syndicats documentent. [À enrichir avec les entretiens]
+            Pearltrees répond que les ressources « peuvent être réorganisées en parcours, à l'infini »<sup><a
+                href="bibliographie.html#n3">[3]</a></sup> — mais cette réorganisation repose entièrement sur
+            l'enseignant, ajoutant une charge de travail invisible que les syndicats documentent. [À enrichir avec les
+            entretiens]
           </p>
 
           <!-- ENCADRÉ COMPARATIF : expérience suédoise — dépliable -->
@@ -224,23 +570,39 @@
               &nbsp;L'expérience suédoise : un retour en arrière instructif
             </summary>
             <div class="n2-details-contenu">
-              <p>La Suède a été pionnière du tout-numérique à l'école dans les années 2010. En 2023, après dix ans de généralisation, le gouvernement suédois a amorcé un retour au manuel papier, s'appuyant sur des études de chercheurs et de médecins pointant une baisse documentée du niveau en lecture et en écriture.<sup><a href="bibliographie.html#n4">[4]</a></sup></p>
-              <p>Cet exemple est fréquemment mobilisé par les critiques comme <em>avertissement empirique</em>. La Région répond que le contexte suédois diffère (tablettes individuelles dès le primaire, absence de progression pédagogique structurée), et que Pearltrees intègre des manuels complets, pas seulement des fragments.</p>
-              <div class="n2-placeholder" style="margin-top:0.75rem;">[À interroger dans les entretiens : les acteurs ont-ils connaissance de l'exemple suédois ? Le mobilisent-ils ?]</div>
+              <p>La Suède a été pionnière du tout-numérique à l'école dans les années 2010. En 2023, après dix ans de
+                généralisation, le gouvernement suédois a amorcé un retour au manuel papier, s'appuyant sur des études
+                de chercheurs et de médecins pointant une baisse documentée du niveau en lecture et en écriture.<sup><a
+                    href="bibliographie.html#n4">[4]</a></sup></p>
+              <p>Cet exemple est fréquemment mobilisé par les critiques comme <em>avertissement empirique</em>. La
+                Région répond que le contexte suédois diffère (tablettes individuelles dès le primaire, absence de
+                progression pédagogique structurée), et que Pearltrees intègre des manuels complets, pas seulement des
+                fragments.</p>
+              <div class="n2-placeholder" style="margin-top:0.75rem;">[À interroger dans les entretiens : les acteurs
+                ont-ils connaissance de l'exemple suédois ? Le mobilisent-ils ?]</div>
             </div>
           </details>
 
           <!-- RENVOI INTER-NŒUDS -->
           <div class="n2-renvoi">
-            <span class="noeud-label" style="display:inline-block;margin-bottom:0.4rem;">Articulation avec le nœud 1</span>
-            <p style="margin:0;font-size:14px;">La liberté pédagogique ne peut s'exercer que si les contenus sont fiables — ce qui renvoie directement à la <strong>gouvernance des contenus</strong> (nœud 1) : qui contrôle ce que les enseignants peuvent ou ne peuvent pas utiliser ? Les deux nœuds se conditionnent mutuellement.</p>
-            <button class="page-nav-btn" style="margin-top:0.75rem;font-size:11px;" onclick="document.querySelector('[data-tab=noeud1]').click()">← Lire le nœud 1 : Gouvernance des contenus</button>
+            <span class="noeud-label" style="display:inline-block;margin-bottom:0.4rem;">Articulation avec le nœud
+              1</span>
+            <p style="margin:0;font-size:14px;">La liberté pédagogique ne peut s'exercer que si les contenus sont
+              fiables — ce qui renvoie directement à la <strong>gouvernance des contenus</strong> (nœud 1) : qui
+              contrôle ce que les enseignants peuvent ou ne peuvent pas utiliser ? Les deux nœuds se conditionnent
+              mutuellement.</p>
+            <button class="page-nav-btn" style="margin-top:0.75rem;font-size:11px;"
+              onclick="document.querySelector('[data-tab=noeud1]').click()">← Lire le nœud 1 : Gouvernance des
+              contenus</button>
           </div>
 
           <!-- IRRÉDUCTIBLE -->
           <div class="encadre">
             <div class="encadre-titre">Ce qui reste irréductiblement en débat</div>
-            <p>La liberté pédagogique est-elle une liberté de <em>choix des outils</em> (argument Région) ou une liberté de <em>construction du savoir</em> (argument éditeurs/syndicats) ? Les effets réels de Pearltrees sur les apprentissages n'ont pas fait l'objet d'une évaluation indépendante — l'évaluation indépendante est précisément l'une des demandes centrales de la tribune du <em>Monde</em>.</p>
+            <p>La liberté pédagogique est-elle une liberté de <em>choix des outils</em> (argument Région) ou une liberté
+              de <em>construction du savoir</em> (argument éditeurs/syndicats) ? Les effets réels de Pearltrees sur les
+              apprentissages n'ont pas fait l'objet d'une évaluation indépendante — l'évaluation indépendante est
+              précisément l'une des demandes centrales de la tribune du <em>Monde</em>.</p>
           </div>
 
         </div>
@@ -252,23 +614,27 @@
             border: 1px solid var(--gris-clair);
             margin: 1.5rem 0 2rem;
           }
+
           .n2-miroir-header {
             display: grid;
             grid-template-columns: 1fr 32px 1fr;
             background: var(--noir);
             color: var(--blanc);
           }
+
           .n2-camp {
             padding: 1rem 1.2rem;
             display: flex;
             flex-direction: column;
             gap: 0.3rem;
           }
+
           .n2-camp strong {
             font-family: var(--font-titre);
             font-size: 1rem;
             font-style: italic;
           }
+
           .n2-camp-vs {
             display: flex;
             align-items: center;
@@ -276,9 +642,10 @@
             font-family: var(--font-mono);
             font-size: 14px;
             color: var(--gris);
-            border-left: 1px solid rgba(255,255,255,0.1);
-            border-right: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
           }
+
           .n2-paire {
             display: grid;
             grid-template-columns: 1fr 32px 1fr;
@@ -286,13 +653,23 @@
             cursor: pointer;
             transition: background var(--transition);
           }
-          .n2-paire:hover { background: #faf9f7; }
+
+          .n2-paire:hover {
+            background: #faf9f7;
+          }
+
           .n2-arg {
             padding: 1.2rem 1.2rem;
             font-size: 14px;
             line-height: 1.65;
           }
-          .n2-arg p { margin-bottom: 0.5rem; color: var(--noir); font-size: 14px; }
+
+          .n2-arg p {
+            margin-bottom: 0.5rem;
+            color: var(--noir);
+            font-size: 14px;
+          }
+
           .n2-arg-label {
             font-family: var(--font-mono);
             font-size: 10px;
@@ -300,10 +677,23 @@
             text-transform: uppercase;
             margin-bottom: 0.5rem;
           }
-          .n2-arg-region .n2-arg-label { color: var(--pour); }
-          .n2-arg-syndicats .n2-arg-label { color: var(--contre); }
-          .n2-arg-region { border-right: none; }
-          .n2-arg-syndicats { border-left: none; }
+
+          .n2-arg-region .n2-arg-label {
+            color: var(--pour);
+          }
+
+          .n2-arg-syndicats .n2-arg-label {
+            color: var(--contre);
+          }
+
+          .n2-arg-region {
+            border-right: none;
+          }
+
+          .n2-arg-syndicats {
+            border-left: none;
+          }
+
           .n2-fleche {
             display: flex;
             align-items: center;
@@ -313,6 +703,7 @@
             border-left: 1px solid var(--gris-clair);
             border-right: 1px solid var(--gris-clair);
           }
+
           .n2-placeholder {
             font-family: var(--font-mono);
             font-size: 11px;
@@ -335,19 +726,24 @@
             font-size: 13px;
             line-height: 1.65;
           }
+
           .n2-alerte-icone {
             font-size: 16px;
             color: var(--accent);
             flex-shrink: 0;
             padding-top: 2px;
           }
-          .n2-alerte-methodo strong { font-weight: 500; }
+
+          .n2-alerte-methodo strong {
+            font-weight: 500;
+          }
 
           /* Détails dépliable */
           .n2-details {
             border: 1px solid var(--gris-clair);
             margin: 1.5rem 0;
           }
+
           .n2-details summary {
             padding: 1rem 1.2rem;
             cursor: pointer;
@@ -359,15 +755,29 @@
             background: var(--gris-clair);
             transition: background var(--transition);
           }
-          .n2-details summary::-webkit-details-marker { display: none; }
-          .n2-details[open] summary { background: var(--noir); color: var(--blanc); }
-          .n2-details[open] summary .encadre-titre { color: var(--gris-clair); }
+
+          .n2-details summary::-webkit-details-marker {
+            display: none;
+          }
+
+          .n2-details[open] summary {
+            background: var(--noir);
+            color: var(--blanc);
+          }
+
+          .n2-details[open] summary .encadre-titre {
+            color: var(--gris-clair);
+          }
+
           .n2-details-contenu {
             padding: 1.2rem 1.5rem;
             font-size: 14px;
             line-height: 1.7;
           }
-          .n2-details-contenu p { margin-bottom: 0.9rem; }
+
+          .n2-details-contenu p {
+            margin-bottom: 0.9rem;
+          }
 
           /* Renvoi inter-nœuds */
           .n2-renvoi {
@@ -379,12 +789,20 @@
           }
 
           @media (max-width: 640px) {
+
             .n2-miroir-header,
             .n2-paire {
               grid-template-columns: 1fr;
             }
-            .n2-camp-vs, .n2-fleche { display: none; }
-            .n2-arg-region { border-bottom: 1px solid var(--gris-clair); }
+
+            .n2-camp-vs,
+            .n2-fleche {
+              display: none;
+            }
+
+            .n2-arg-region {
+              border-bottom: 1px solid var(--gris-clair);
+            }
           }
         </style>
 
