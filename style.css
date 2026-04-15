@@ -349,26 +349,37 @@ p {
 
 /* ===== Problématique !===== */
 
-
-.fil-rouge {
-  border-left: none; /* On enlève le bord gauche habituel */
-  border-top: 3px solid var(--accent);
-  border-bottom: 3px solid var(--accent);
+.problematique-container {
+  /* Encadré complet */
+  border: 1px solid var(--accent);
+  border-left: 5px solid var(--accent); /* Accentuation sur la gauche style "noeud" */
+  
   background: var(--blanc);
-  text-align: center;
   padding: 3rem 2rem;
   margin: 4rem 0;
+  text-align: center;
+  position: relative;
 }
 
-.problematique-texte {
-  border-left: none;
-  padding: 0;
+.problematique-container .noeud-label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--blanc); /* Pour couper la bordure avec le label */
+  padding: 0 10px;
   margin: 0;
+}
+
+.problematique-question {
   font-family: var(--font-titre);
-  font-size: 1.6rem;
-  line-height: 1.4;
-  color: var(--noir);
+  font-size: 1.5rem !important;
+  font-weight: 400;
   font-style: italic;
+  color: var(--noir);
+  line-height: 1.4;
+  text-transform: none !important; /* Pour éviter le passage en majuscules des h3 */
+  letter-spacing: normal !important;
+  margin: 0 !important;
 }
 
 /* ===== ONGLETS NOEUDS (tabs horizontaux) ===== */
