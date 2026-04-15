@@ -916,3 +916,29 @@ footer {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
 }
+
+/* ===== Citations ===== */
+
+/* Style spécifique pour les citations polarisées */
+blockquote.quote-faveur {
+  border-left-color: var(--pour) !important;
+  background: var(--pour-doux); /* Utilise ton vert très clair */
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+blockquote.quote-defaveur {
+  border-left-color: var(--contre) !important;
+  background: var(--contre-doux); /* Utilise ton rouge très clair */
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Optionnel : forcer la couleur de la source pour la lisibilité */
+blockquote.quote-faveur cite {
+  color: var(--pour);
+}
+
+blockquote.quote-defaveur cite {
+  color: var(--contre);
+}
