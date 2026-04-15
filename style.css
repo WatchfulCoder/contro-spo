@@ -349,37 +349,32 @@ p {
 
 /* ===== Problématique !===== */
 
-.problematique-container {
-  /* Encadré complet */
-  border: 1px solid var(--accent);
-  border-left: 5px solid var(--accent); /* Accentuation sur la gauche style "noeud" */
-  
-  background: var(--blanc);
+.problematique-box {
+  /* On crée l'encadré complet ici */
+  border: 1.5px solid var(--accent);
   padding: 3rem 2rem;
   margin: 4rem 0;
+  background: var(--blanc);
   text-align: center;
-  position: relative;
 }
 
-.problematique-container .noeud-label {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  background: var(--blanc); /* Pour couper la bordure avec le label */
-  padding: 0 10px;
-  margin: 0;
+.problematique-box .noeud-label {
+  margin-bottom: 1.5rem;
+  display: block;
 }
 
-.problematique-question {
-  font-family: var(--font-titre);
-  font-size: 1.5rem !important;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--noir);
-  line-height: 1.4;
-  text-transform: none !important; /* Pour éviter le passage en majuscules des h3 */
-  letter-spacing: normal !important;
-  margin: 0 !important;
+.problematique-texte {
+  /* On annule les styles par défaut du h3 qui pourraient gêner */
+  font-family: var(--font-titre) !important;
+  font-size: 1.6rem !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  color: var(--noir) !important;
+  text-transform: none !important; /* Enlève les majuscules */
+  letter-spacing: normal !important; /* Enlève l'espacement large */
+  line-height: 1.4 !important;
+  margin: 0 auto !important;
+  max-width: 700px;
 }
 
 /* ===== ONGLETS NOEUDS (tabs horizontaux) ===== */
