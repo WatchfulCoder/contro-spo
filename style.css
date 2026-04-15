@@ -279,6 +279,74 @@ p {
   }
 }
 
+/* =======Personnalisation du bloc contexte ============== */
+.context-container {
+  margin: 3rem 0;
+  border: 1px solid var(--gris-clair);
+  background: var(--gris-clair); /* Pour créer les lignes de séparation */
+}
+
+.context-titre {
+  background: var(--blanc);
+  margin: 0 !important;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris);
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+.context-full {
+  background: var(--blanc) !important;
+  margin: 0 !important;
+  border-left: 4px solid var(--accent) !important;
+  padding: 2rem !important;
+}
+
+.stat-chiffre-titre {
+  font-family: var(--font-titre);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--noir);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.context-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.context-list li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gris);
+  line-height: 1.4;
+  position: relative;
+  padding-left: 15px;
+}
+
+.context-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Ajustement de la grille sous le bloc principal */
+.context-container .stat-grid {
+  margin: 0 !important;
+}
+
+.context-container .stat {
+  padding: 2rem 1.5rem;
+}
+
 /* ===== ONGLETS NOEUDS (tabs horizontaux) ===== */
 .tabs {
   margin-bottom: 0;
