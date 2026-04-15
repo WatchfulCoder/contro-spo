@@ -347,6 +347,30 @@ p {
   padding: 2rem 1.5rem;
 }
 
+/* ===== Problématique !===== */
+
+
+.fil-rouge {
+  border-left: none; /* On enlève le bord gauche habituel */
+  border-top: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+  background: var(--blanc);
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 4rem 0;
+}
+
+.problematique-texte {
+  border-left: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-titre);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: var(--noir);
+  font-style: italic;
+}
+
 /* ===== ONGLETS NOEUDS (tabs horizontaux) ===== */
 .tabs {
   margin-bottom: 0;
