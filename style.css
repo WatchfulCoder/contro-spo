@@ -349,32 +349,38 @@ p {
 
 /* ===== Problématique !===== */
 
-.problematique-box {
-  /* On crée l'encadré complet ici */
-  border: 1.5px solid var(--accent);
+/* Bloc problématique */
+.problematique-container {
+  /* On dessine l'encadré complet */
+  border: 1px solid var(--accent) !important; 
   padding: 3rem 2rem;
   margin: 4rem 0;
   background: var(--blanc);
   text-align: center;
-}
-
-.problematique-box .noeud-label {
-  margin-bottom: 1.5rem;
   display: block;
 }
 
-.problematique-texte {
-  /* On annule les styles par défaut du h3 qui pourraient gêner */
+/* Label au dessus de la question */
+.problematique-container .noeud-label {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Style de la phrase (aligné sur ton style de corps/titre) */
+.problematique-phrase {
   font-family: var(--font-titre) !important;
   font-size: 1.6rem !important;
-  font-weight: 400 !important;
-  font-style: italic !important;
   color: var(--noir) !important;
-  text-transform: none !important; /* Enlève les majuscules */
-  letter-spacing: normal !important; /* Enlève l'espacement large */
+  font-style: italic !important;
   line-height: 1.4 !important;
   margin: 0 auto !important;
   max-width: 700px;
+  font-weight: 400 !important;
 }
 
 /* ===== ONGLETS NOEUDS (tabs horizontaux) ===== */
