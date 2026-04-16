@@ -1622,7 +1622,27 @@
           window.scrollTo({ top: top, behavior: 'smooth' });
         });
       });
-    })();
+
+    // GESTION DE L'ARRIVÉE DEPUIS UNE AUTRE PAGE (ex: depuis acteurs.html)
+    function checkHash() {
+      var hash = window.location.hash.substring(1);
+      if (hash && document.getElementById('tab-' + hash)) {
+        switchTab(hash, false); // On change l'onglet sans ré-écrire le hash
+        
+        // Petit délai pour laisser le temps au navigateur de charger avant de scroller
+        setTimeout(function() {
+          var top = document.querySelector('h1').getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 50);
+      }
+    }
+
+    // On vérifie au chargement et si l'utilisateur utilise les flèches retour du navigateur
+    window.addEventListener('load', checkHash);
+    window.addEventListener('popstate', checkHash);
+
+  })();
+    
   </script>
 </body>
 
