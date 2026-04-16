@@ -542,80 +542,230 @@
 
           <!-- VISUALISATION MIROIR DES POSITIONS -->
           <h3>Deux définitions de la liberté</h3>
-          <p>Les deux camps ne parlent pas de la même liberté. Clique sur chaque argument pour voir sa réfutation.</p>
 
-          <div class="n2-miroir" id="miroir-conteneur">
-            <!-- En-tête camps -->
-            <div class="n2-miroir-header">
-              <div class="n2-camp n2-camp-region">
-                <span class="acteur-camp pour">Camp Région</span>
-                <strong>Liberté augmentée</strong>
-              </div>
-              <div class="n2-camp-vs">↔</div>
-              <div class="n2-camp n2-camp-syndicats">
-                <span class="acteur-camp contre">Syndicats &amp; éditeurs</span>
-                <strong>Liberté confisquée</strong>
-              </div>
+          <p>[paragraphe analytique introductif]</p>
+
+          <!-- STYLES PAIRES NOEUD 2 -->
+          <style>
+            .paire {
+              background: #faf9f7;
+              border: 1px solid var(--gris-clair);
+              padding: 1.4rem 1.3rem;
+              display: grid;
+              grid-template-columns: 1fr 1px 1fr;
+              gap: 1.2rem;
+              margin-bottom: 1.5rem;
+            }
+
+            .paire-titre {
+              grid-column: 1 / -1;
+              font-family: var(--font-mono);
+              font-size: 10px;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              color: var(--accent);
+              margin-bottom: 0.25rem;
+            }
+
+            .paire-divider {
+              background: var(--gris-clair);
+              width: 1px;
+            }
+
+            .paire-cell {
+              font-size: 14px;
+              line-height: 1.7;
+              color: var(--noir);
+            }
+
+            .paire-label {
+              font-family: var(--font-mono);
+              font-size: 10px;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              margin-bottom: 0.5rem;
+            }
+
+            .paire-cell--region .paire-label {
+              color: var(--pour);
+            }
+
+            .paire-cell--critique .paire-label {
+              color: var(--contre);
+            }
+
+            .paire-placeholder {
+              font-family: var(--font-mono);
+              font-size: 11px;
+              color: var(--gris);
+              background: var(--gris-clair);
+              padding: 0.3rem 0.6rem;
+              margin-top: 0.6rem;
+              display: inline-block;
+              opacity: 0.75;
+            }
+
+            .paire-renvoi {
+              font-family: var(--font-mono);
+              font-size: 11px;
+              color: var(--neutre);
+              background: var(--neutre-doux);
+              padding: 0.3rem 0.6rem;
+              margin-top: 0.6rem;
+              display: inline-block;
+            }
+
+            @media (max-width: 640px) {
+              .paire {
+                grid-template-columns: 1fr;
+              }
+
+              .paire-divider {
+                display: none;
+              }
+
+              .paire-cell--region {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid var(--gris-clair);
+              }
+            }
+          </style>
+
+          <!-- PAIRE 1 -->
+          <div class="paire">
+            <div class="paire-titre">↔ Liberté formelle vs liberté matérielle</div>
+            <div class="paire-cell paire-cell--region">
+              <div class="paire-label">Région</div>
+              Pearltrees offre un accès à des ressources supplémentaires, libres et gratuites. Aucun enseignant n'est
+              formellement contraint de les utiliser — la plateforme est un outil parmi d'autres.
+              <div class="paire-placeholder">[entretien Région]</div>
             </div>
-
-            <!-- Paire 1 : choix des outils vs contrainte budgétaire -->
-            <div class="n2-paire" data-id="1">
-              <div class="n2-arg n2-arg-region">
-                <div class="n2-arg-label">Argument</div>
-                <p>Pearltrees donne aux enseignants la liberté de <em>recomposer leurs cours</em>, d'enrichir les
-                  ressources, de personnaliser selon les besoins de leurs élèves. 50 millions de contenus ont été
-                  générés par les professeurs sur la plateforme.</p>
-                <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
-              </div>
-              <div class="n2-fleche">→</div>
-              <div class="n2-arg n2-arg-syndicats">
-                <div class="n2-arg-label">Réfutation</div>
-                <p>La liberté est formellement préservée mais <em>matériellement impossible</em> : avec 16 € par élève,
-                  financer d'autres supports que les manuels libres est exclu. La liberté de choix sans les moyens du
-                  choix n'est pas une liberté.</p>
-                <div class="n2-placeholder">[À enrichir avec les entretiens syndicats]</div>
-              </div>
+            <div class="paire-divider"></div>
+            <div class="paire-cell paire-cell--critique">
+              <div class="paire-label">Critiques</div>
+              La coupe de 75 % des subventions aux éditeurs rend le recours aux manuels traditionnels économiquement
+              impossible. La liberté formelle est réelle ; la liberté matérielle ne l'est pas.
+              <div class="paire-renvoi">→ voir aussi nœud 1 : contrôle des contenus</div>
             </div>
+          </div>
 
-            <!-- Paire 2 : dépasser le manuel figé vs repère partagé -->
-            <div class="n2-paire" data-id="2">
-              <div class="n2-arg n2-arg-region">
-                <div class="n2-arg-label">Argument</div>
-                <p>Les éditeurs privés « coinçaient » les enseignants dans des manuels figés, imposant un fil conducteur
-                  unique. Pearltrees libère d'une structure éditoriale imposée de l'extérieur.</p>
-                <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
-              </div>
-              <div class="n2-fleche">→</div>
-              <div class="n2-arg n2-arg-syndicats">
-                <div class="n2-arg-label">Réfutation</div>
-                <p>Le manuel crée un <em>repère partagé</em> entre élèves d'une même classe et entre classes — une
-                  continuité pédagogique qui n'est pas une contrainte mais une ressource. Sa suppression fragmente, elle
-                  n'émancipe pas.</p>
-                <div class="n2-placeholder">[À enrichir avec les entretiens éditeurs]</div>
-              </div>
+          <!-- PAIRE 2 -->
+          <div class="paire">
+            <div class="paire-titre">↔ Des ressources enrichies vs un choix appauvri</div>
+            <div class="paire-cell paire-cell--region">
+              <div class="paire-label">Région</div>
+              75 % des licences de manuels numériques achetées aux éditeurs n'étaient jamais ouvertes. Les contenus
+              granulaires donnent accès à davantage de ressources, notamment interactives, que les manuels classiques
+              peu utilisés.
+              <div class="paire-placeholder">[entretien Région — chiffre 75 % à sourcer]</div>
             </div>
+            <div class="paire-divider"></div>
+            <div class="paire-cell paire-cell--critique">
+              <div class="paire-label">Critiques</div>
+              Les manuels numériques classiques n'étaient pas ouverts précisément parce que le format Pearltrees en
+              retirait l'interactivité native. La granularité ne remplace pas la diversité éditoriale : choisir entre
+              dix manuels sur une même question, c'est choisir entre dix points de vue.
+              <div class="paire-placeholder">[entretien éditeurs / syndicats]</div>
+            </div>
+          </div>
 
-            <!-- Paire 3 : consultation vs absence de consultation -->
-            <div class="n2-paire" data-id="3">
-              <div class="n2-arg n2-arg-region">
-                <div class="n2-arg-label">Argument</div>
-                <p>Les enseignants volontaires ont été associés à la construction des manuels libres via des groupes de
-                  travail coordonnés avec l'Éducation nationale. La plateforme a été testée avant généralisation.</p>
-                <div class="n2-placeholder">[À enrichir avec l'entretien Région]</div>
-              </div>
-              <div class="n2-fleche">→</div>
-              <div class="n2-arg n2-arg-syndicats">
-                <div class="n2-arg-label">Réfutation</div>
-                <p>Les enseignants n'ont pas été consultés — ni en 2022 lors du lancement, ni en 2024 lors du passage à
-                  l'obligation. La « co-construction » désigne un groupe restreint de volontaires, non l'ensemble du
-                  corps enseignant.</p>
-                <div class="n2-placeholder">[À enrichir avec les entretiens syndicats]</div>
-              </div>
+          <!-- PAIRE 3 -->
+          <div class="paire">
+            <div class="paire-titre">↔ Structure à la carte vs perte de repère commun</div>
+            <div class="paire-cell paire-cell--region">
+              <div class="paire-label">Région</div>
+              Le format granulaire permet à chaque enseignant de composer son cours selon ses besoins, sa classe, son
+              rythme. C'est l'enseignant — et non l'éditeur — qui organise la progression pédagogique.
+              <div class="paire-placeholder">[entretien Région]</div>
+            </div>
+            <div class="paire-divider"></div>
+            <div class="paire-cell paire-cell--critique">
+              <div class="paire-label">Critiques</div>
+              La structure granulaire supprime le fil conducteur partagé entre élèves d'une même classe et entre
+              classes. Le manuel n'était pas qu'un outil pédagogique — c'était un repère commun dont la disparition
+              affecte d'abord les élèves les plus fragiles.
+              <div class="paire-placeholder">[entretien syndicats / CESER]</div>
+            </div>
+          </div>
+
+          <!-- PAIRE 4 -->
+          <div class="paire">
+            <div class="paire-titre">↔ Accès centralisé vs formation insuffisante</div>
+            <div class="paire-cell paire-cell--region">
+              <div class="paire-label">Région</div>
+              Pearltrees centralise toutes les ressources numériques en un seul point d'accès via l'ENT. Plus besoin de
+              jongler entre les plateformes de chaque éditeur — la prise en main est accompagnée par des formations
+              proposées aux enseignants.
+              <div class="paire-placeholder">[entretien Région]</div>
+            </div>
+            <div class="paire-divider"></div>
+            <div class="paire-cell paire-cell--critique">
+              <div class="paire-label">Critiques</div>
+              La centralisation suppose une maîtrise de l'outil que la formation dispensée ne permet pas. La liberté de
+              composer son cours sur Pearltrees reste théorique pour un enseignant qui n'a pas été formé à en exploiter
+              les fonctionnalités.
+              <div class="paire-placeholder">[entretien syndicats — témoignages enseignants]</div>
+            </div>
+          </div>
+
+          <!-- PAIRE 5 -->
+          <div class="paire">
+            <div class="paire-titre">↔ Égalité formelle vs inégalité réelle</div>
+            <div class="paire-cell paire-cell--region">
+              <div class="paire-label">Région</div>
+              Une plateforme unique, gratuite, accessible à tous les élèves via l'ENT régional, sans achat de manuel. Un
+              argument de justice sociale : le numérique comme levier d'égalisation.
+              <div class="paire-placeholder">[entretien Région]</div>
+            </div>
+            <div class="paire-divider"></div>
+            <div class="paire-cell paire-cell--critique">
+              <div class="paire-label">Critiques</div>
+              L'accès universel suppose un ordinateur fonctionnel et une connexion stable — ce qui n'est pas garanti
+              pour tous les élèves franciliens. La gratuité de la plateforme ne suffit pas à garantir l'égalité d'accès
+              réelle.
+              <div class="paire-renvoi">→ voir nœud 3 : effets sociaux</div>
             </div>
           </div><!-- fin miroir -->
 
+          <!-- FOCUS MIGRATION FORCÉE -->
+          <details class="n2-details">
+            <summary>
+              <span class="encadre-titre" style="display:inline;">Focus</span>
+              &nbsp;Une migration progressive forcée ?
+            </summary>
+            <div class="n2-details-contenu">
+              <p>
+                à la prohcaine réforme c'est la galère.
+              </p>
+              <div class="n2-placeholder" style="margin-top:0.75rem;">[À interroger dans les entretiens : les acteurs
+                ont-ils connaissance de l'exemple suédois ? Le mobilisent-ils ?]</div>
+            </div>
+          </details>
+
+          <!-- SOUS-NŒUD : fragmentation cognitive -->
+          <h3>Sous-nœud — fragmentation cognitive et format granulaire</h3>
+          <p>
+            Derrière la question de la liberté se profile un désaccord plus profond sur ce qu'est apprendre. Le format
+            granulaire de Pearltrees — des ressources courtes, modulaires, recomposables — est présenté par la Région
+            comme une modernisation pédagogique. Les éditeurs y voient une « tiktokisation » des savoirs : une logique
+            de flux qui fragmente la connaissance en unités disjointes, sans progression construite.
+          </p>
+
+          <blockquote>
+            « Nous ne sommes ni nostalgiques, ni technophobes. Mais nous affirmons que l'éradication du manuel scolaire
+            comme repère partagé est une erreur pédagogique, sociale et démocratique. »
+            <cite>— Collectif de 500 signataires, tribune, <em>Le Monde</em>, 2 septembre 2025</cite>
+          </blockquote>
+
+          <p>
+            Pearltrees répond que les ressources « peuvent être réorganisées en parcours, à l'infini »<sup><a
+                href="bibliographie.html#n3">[3]</a></sup> — mais cette réorganisation repose entièrement sur
+            l'enseignant, ajoutant une charge de travail invisible que les syndicats documentent. [À enrichir avec les
+            entretiens]
+          </p>
+
           <!-- DONNÉES CHIFFRÉES avec note méthodologique -->
-          <h3>Des chiffres critiques de la politique de la région</h3>
+          <h3>La question de la concertation</h3>
 
           <div class="stat-grid" style="margin-bottom:0.5rem;">
             <div class="stat">
@@ -644,28 +794,6 @@
             </div>
           </div>
 
-          <!-- SOUS-NŒUD : fragmentation cognitive -->
-          <h3>Sous-nœud — fragmentation cognitive et format granulaire</h3>
-          <p>
-            Derrière la question de la liberté se profile un désaccord plus profond sur ce qu'est apprendre. Le format
-            granulaire de Pearltrees — des ressources courtes, modulaires, recomposables — est présenté par la Région
-            comme une modernisation pédagogique. Les éditeurs y voient une « tiktokisation » des savoirs : une logique
-            de flux qui fragmente la connaissance en unités disjointes, sans progression construite.
-          </p>
-
-          <blockquote>
-            « Nous ne sommes ni nostalgiques, ni technophobes. Mais nous affirmons que l'éradication du manuel scolaire
-            comme repère partagé est une erreur pédagogique, sociale et démocratique. »
-            <cite>— Collectif de 500 signataires, tribune, <em>Le Monde</em>, 2 septembre 2025</cite>
-          </blockquote>
-
-          <p>
-            Pearltrees répond que les ressources « peuvent être réorganisées en parcours, à l'infini »<sup><a
-                href="bibliographie.html#n3">[3]</a></sup> — mais cette réorganisation repose entièrement sur
-            l'enseignant, ajoutant une charge de travail invisible que les syndicats documentent. [À enrichir avec les
-            entretiens]
-          </p>
-
           <!-- ENCADRÉ COMPARATIF : expérience suédoise — dépliable -->
           <details class="n2-details">
             <summary>
@@ -687,12 +815,14 @@
           </details>
 
           <!-- IRRÉDUCTIBLE -->
-          <div class="encadre">
-            <div class="encadre-titre">Ce qui reste irréductiblement en débat</div>
+          <div class="n1-irreductible">
+            <div class="n1-irreductible-label">Ce qui reste irréductiblement en débat</div>
+            <p class="n1-irreductible-texte">
             <p>La liberté pédagogique est-elle une liberté de <em>choix des outils</em> (argument Région) ou une liberté
               de <em>construction du savoir</em> (argument éditeurs/syndicats) ? Les effets réels de Pearltrees sur les
               apprentissages n'ont pas fait l'objet d'une évaluation indépendante — l'évaluation indépendante est
               précisément l'une des demandes centrales de la tribune du <em>Monde</em>.</p>
+            </p>
           </div>
 
           <!-- RENVOI INTER-NŒUDS -->
@@ -914,128 +1044,143 @@
         </style>
 
         <div class="tab-panel" id="tab-noeud3">
-  <h2>3. Quels coûts, et pour qui ?</h2>
+          <h2>3. Quels coûts, et pour qui ?</h2>
 
-  <div class="noeud">
-    <div class="noeud-label">Le point de tension</div>
-    <h4>Comment démêler les motivations du passage au tout numérique et aux manuels libres, ainsi que les conséquences associées ?</h4>
-  </div>
+          <div class="noeud">
+            <div class="noeud-label">Le point de tension</div>
+            <h4>Comment démêler les motivations du passage au tout numérique et aux manuels libres, ainsi que les
+              conséquences associées ?</h4>
+          </div>
 
-  <h3>Les moteurs de la décision</h3>
-  <div class="acteur-grid">
-    <div class="acteur-card pour">
-      <div class="acteur-camp pour">Argument Région</div>
-      <div class="acteur-nom">Rationalisation</div>
-      <div class="acteur-position">
-        La décision est motivée par des questions budgétaires : l'argument des 75% de licences 
-        de manuels numériques non-ouvertes est régulièrement avancé. La plateforme Pearltrees
-        est présentée comme une solution unique pour rationaliser la gestion des ressources numériques, 
-        en centralisant les contenus.  
-      </div>
-    </div>
-    <div class="acteur-card pour">
-      <div class="acteur-camp pour">Argument Région</div>
-      <div class="acteur-nom">Diversification</div>
-      <div class="acteur-position">
-        Les manuels libres sont présentés comme une ressource pédagogique parmi d'autres, que 
-        les professeurs peuvent choisir à loisir pour concevoir leurs cours. Ils sont aussi une
-        façon de lutter contre le monopole des éditeurs privés.
-      </div>
-    </div>
-    <div class="acteur-card contre">
-      <div class="acteur-camp contre">Argument Critique</div>
-      <div class="acteur-nom">Assèchement budgétaire</div>
-      <div class="acteur-position">
-        La contrainte est financière : la Région anticipe 177M€ de perte de recettes sur l'année 2025-2026. 
-        La réduction du budget alloué aux manuels (de 75€ à 16 € par élève) est perçu comme une façon de 
-        pallier cette perte. 
-    </div>
-    </div>
-  
-  <div class="acteur-card contre">
-      <div class="acteur-camp contre">Argument Critique</div>
-      <div class="acteur-nom">Assèchement des contenus</div>
-      <div class="acteur-position">
-        Si, en théorie, les enseignants peuvent toujours choisir parmi les manuels libres, les manuels d'éditeurs
-        numériques ou papiers, la réduction des budgets alloués aux manuels éditeurs réduit, à termes, l'ampleur des
-        ressources à disposition des professeurs et les poussent vers le libre. 
-    </div>
-  </div>
-  </div>
+          <h3>Les moteurs de la décision</h3>
+          <div class="acteur-grid">
+            <div class="acteur-card pour">
+              <div class="acteur-camp pour">Argument Région</div>
+              <div class="acteur-nom">Rationalisation</div>
+              <div class="acteur-position">
+                La décision est motivée par des questions budgétaires : l'argument des 75% de licences
+                de manuels numériques non-ouvertes est régulièrement avancé. La plateforme Pearltrees
+                est présentée comme une solution unique pour rationaliser la gestion des ressources numériques,
+                en centralisant les contenus.
+              </div>
+            </div>
+            <div class="acteur-card pour">
+              <div class="acteur-camp pour">Argument Région</div>
+              <div class="acteur-nom">Diversification</div>
+              <div class="acteur-position">
+                Les manuels libres sont présentés comme une ressource pédagogique parmi d'autres, que
+                les professeurs peuvent choisir à loisir pour concevoir leurs cours. Ils sont aussi une
+                façon de lutter contre le monopole des éditeurs privés.
+              </div>
+            </div>
+            <div class="acteur-card contre">
+              <div class="acteur-camp contre">Argument Critique</div>
+              <div class="acteur-nom">Assèchement budgétaire</div>
+              <div class="acteur-position">
+                La contrainte est financière : la Région anticipe 177M€ de perte de recettes sur l'année 2025-2026.
+                La réduction du budget alloué aux manuels (de 75€ à 16 € par élève) est perçu comme une façon de
+                pallier cette perte.
+              </div>
+            </div>
 
-  <blockquote class="quote-faveur">
-  « Un élève pouvait se retrouver avec sept plateformes différentes en fonction des éditeurs qu'il avait en face, [...]
-  avec un UX design qui n'était quand même pas très bon. On s'est dit qu'on ne pouvait pas continuer de cette manière là.»
-  <cite>— Bernard Giry, DGA Pôle transformation numérique de la région IDF, entretien du 10/04/2025</cite>
-</blockquote>
+            <div class="acteur-card contre">
+              <div class="acteur-camp contre">Argument Critique</div>
+              <div class="acteur-nom">Assèchement des contenus</div>
+              <div class="acteur-position">
+                Si, en théorie, les enseignants peuvent toujours choisir parmi les manuels libres, les manuels
+                d'éditeurs
+                numériques ou papiers, la réduction des budgets alloués aux manuels éditeurs réduit, à termes, l'ampleur
+                des
+                ressources à disposition des professeurs et les poussent vers le libre.
+              </div>
+            </div>
+          </div>
 
-<blockquote class="quote-defaveur">
-  « En réduisant le financement des manuels, il s’agit indirectement de prendre le contrôle des pratiques pédagogiques et d’économiser massivement. »
-  <cite> SNES-FSU Versailles, syndicat du secondaire, Site internet, 4 sept. 2025</cite>
-</blockquote>
+          <blockquote class="quote-faveur">
+            « Un élève pouvait se retrouver avec sept plateformes différentes en fonction des éditeurs qu'il avait en
+            face, [...]
+            avec un UX design qui n'était quand même pas très bon. On s'est dit qu'on ne pouvait pas continuer de cette
+            manière là.»
+            <cite>— Bernard Giry, DGA Pôle transformation numérique de la région IDF, entretien du 10/04/2025</cite>
+          </blockquote>
+
+          <blockquote class="quote-defaveur">
+            « En réduisant le financement des manuels, il s’agit indirectement de prendre le contrôle des pratiques
+            pédagogiques et d’économiser massivement. »
+            <cite> SNES-FSU Versailles, syndicat du secondaire, Site internet, 4 sept. 2025</cite>
+          </blockquote>
 
 
-  <h3>Inégalités sociales et territoriales</h3>
+          <h3>Inégalités sociales et territoriales</h3>
 
-   <div class="acteur-grid">
-    <div class="acteur-card neutre">
-      <div class="acteur-camp neutre">Inégalités sociales</div>
-      <div class="acteur-nom">Un creusement des inégalités ?</div>
-      <div class="acteur-position">
-        Les familles aisées peuvent racheter les manuels papiers si besoin, tandis
-        que d'autres sont réduites au contenu en ligne, avec de potentielles difficultés d'accès.
-      </div>
-    </div>
-    <div class="acteur-card neutre">
-      <div class="acteur-camp neutre">Inégalités entre lycées</div>
-      <div class="acteur-nom">Rupture entre public et privé</div>
-      <div class="acteur-position">
-        
-      </div>
-    </div>
-  </div>
+          <div class="acteur-grid">
+            <div class="acteur-card neutre">
+              <div class="acteur-camp neutre">Inégalités sociales</div>
+              <div class="acteur-nom">Un creusement des inégalités ?</div>
+              <div class="acteur-position">
+                Les familles aisées peuvent racheter les manuels papiers si besoin, tandis
+                que d'autres sont réduites au contenu en ligne, avec de potentielles difficultés d'accès.
+              </div>
+            </div>
+            <div class="acteur-card neutre">
+              <div class="acteur-camp neutre">Inégalités entre lycées</div>
+              <div class="acteur-nom">Rupture entre public et privé</div>
+              <div class="acteur-position">
 
-  <div class="noeud" style="border-left-color: var(--neutre); background: var(--neutre-doux);">
-    <div class="noeud-label" style="color: var(--neutre);">Analyse des fractures</div>
-    <p>La gestion régionale des manuels entre en tension avec le cadre national du Baccalauréat et de Parcoursup :</p>
-    <ul style="margin-left: 1.5rem; font-size: 15px;">
-      <li><strong>Fracture Sociale :</strong> Les familles aisées rachètent les manuels papier ; les autres dépendent du "scroll".</li>
-      <li><strong>Rupture Public/Privé :</strong> Les lycées privés sollicitent les familles pour maintenir le papier ; le public est verrouillé.</li>
-      <li><strong>Inégalité Territoriale :</strong> Recours forcé aux photocopies ou impressions financées par les parents (ex: FCPE 78).</li>
-      <li><strong>Équité Nationale :</strong> Une préparation inégale aux examens nationaux selon les ressources du lycée (Pétition Louis-Bascan).</li>
-    </ul>
-  </div>
+              </div>
+            </div>
+          </div>
 
-  <h3>Santé mentale et temps d'écran</h3>
-  <div class="acteur-grid">
-    <div class="acteur-card neutre">
-      <div class="acteur-camp neutre">Le paradoxe des casiers</div>
-      <div class="acteur-nom">Contradiction régionale</div>
-      <div class="acteur-position">
-        La Région installe des casiers pour confisquer les smartphones (lutte contre l'addiction) tout en imposant Pearltrees sur ordinateur. Un paradoxe pointé par le CESER sur la santé mentale des élèves.
-      </div>
-    </div>
-    <div class="acteur-card neutre">
-      <div class="acteur-camp neutre">Contrôle parental</div>
-      <div class="acteur-nom">Difficulté de vérification</div>
-      <div class="acteur-position">
-        "En tant que parent, comment vérifier l'usage qui est fait de l'ordinateur ?" (Témoignage France 3). Le passage au tout-numérique affaiblit le suivi familial de la scolarité.
-      </div>
-    </div>
-  </div>
+          <div class="noeud" style="border-left-color: var(--neutre); background: var(--neutre-doux);">
+            <div class="noeud-label" style="color: var(--neutre);">Analyse des fractures</div>
+            <p>La gestion régionale des manuels entre en tension avec le cadre national du Baccalauréat et de Parcoursup
+              :</p>
+            <ul style="margin-left: 1.5rem; font-size: 15px;">
+              <li><strong>Fracture Sociale :</strong> Les familles aisées rachètent les manuels papier ; les autres
+                dépendent du "scroll".</li>
+              <li><strong>Rupture Public/Privé :</strong> Les lycées privés sollicitent les familles pour maintenir le
+                papier ; le public est verrouillé.</li>
+              <li><strong>Inégalité Territoriale :</strong> Recours forcé aux photocopies ou impressions financées par
+                les parents (ex: FCPE 78).</li>
+              <li><strong>Équité Nationale :</strong> Une préparation inégale aux examens nationaux selon les ressources
+                du lycée (Pétition Louis-Bascan).</li>
+            </ul>
+          </div>
 
-  <blockquote>
-    « La politique du tout-numérique imposé dans les lycées franciliens depuis la rentrée 2025 crée de nouvelles
-    fractures et affaiblit les apprentissages. »
-    <cite>— CESER Île-de-France, avis n°2025-09, novembre 2025</cite>
-  </blockquote>
+          <h3>Santé mentale et temps d'écran</h3>
+          <div class="acteur-grid">
+            <div class="acteur-card neutre">
+              <div class="acteur-camp neutre">Le paradoxe des casiers</div>
+              <div class="acteur-nom">Contradiction régionale</div>
+              <div class="acteur-position">
+                La Région installe des casiers pour confisquer les smartphones (lutte contre l'addiction) tout en
+                imposant Pearltrees sur ordinateur. Un paradoxe pointé par le CESER sur la santé mentale des élèves.
+              </div>
+            </div>
+            <div class="acteur-card neutre">
+              <div class="acteur-camp neutre">Contrôle parental</div>
+              <div class="acteur-nom">Difficulté de vérification</div>
+              <div class="acteur-position">
+                "En tant que parent, comment vérifier l'usage qui est fait de l'ordinateur ?" (Témoignage France 3). Le
+                passage au tout-numérique affaiblit le suivi familial de la scolarité.
+              </div>
+            </div>
+          </div>
 
-  <div class="encadre">
-    <div class="encadre-titre">Ce qui reste irréductiblement en débat</div>
-    <p>L'absence d'étude d'impact social préalable laisse une question sans réponse : le gain budgétaire immédiat pour la Région ne se traduit-il pas par un coût social et pédagogique différé pour les familles et l'État ?</p>
-  </div>
-</div>
-      <a href="#" class="back-top">↑ Haut de page</a>
+          <blockquote>
+            « La politique du tout-numérique imposé dans les lycées franciliens depuis la rentrée 2025 crée de nouvelles
+            fractures et affaiblit les apprentissages. »
+            <cite>— CESER Île-de-France, avis n°2025-09, novembre 2025</cite>
+          </blockquote>
+
+          <div class="encadre">
+            <div class="encadre-titre">Ce qui reste irréductiblement en débat</div>
+            <p>L'absence d'étude d'impact social préalable laisse une question sans réponse : le gain budgétaire
+              immédiat pour la Région ne se traduit-il pas par un coût social et pédagogique différé pour les familles
+              et l'État ?</p>
+          </div>
+        </div>
+        <a href="#" class="back-top">↑ Haut de page</a>
 
     </main>
   </div><!-- fin .page-layout -->
