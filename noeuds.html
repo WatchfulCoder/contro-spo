@@ -549,9 +549,8 @@
               large par laquelle la Région a progressivement construit une infrastructure scolaire intégrée. Cette
               politique soulève des questions plus larges sur les <strong>effets sociaux</strong> (noeud 3) pour les
               élèves, les
-              ingélités d'accès
+              inégalités d'accès
               ou encore l'impact sur la santé mentale. Il s'agit du troisième noeud principal de la controverse.
-              sociaux de cette intégration sont documentés dans le nœud 3.
             </p>
             <button class="page-nav-btn" style="margin-top:0.75rem;font-size:11px;"
               onclick="document.querySelector('[data-tab=noeud3]').click()">Lire le nœud 3 : Quels coûts, et pour qui ?
@@ -1615,52 +1614,52 @@
 
   <script src="script.js"></script>
   <script>
-  (function () {
-    const tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
-    const tabPanels = document.querySelectorAll('.tab-panel');
+    (function () {
+      const tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
+      const tabPanels = document.querySelectorAll('.tab-panel');
 
-    // FONCTION UNIQUE POUR CHANGER D'ONGLET
-    function activateTab(targetId) {
-      // 1. On nettoie l'état précédent
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabPanels.forEach(p => p.classList.remove('active'));
+      // FONCTION UNIQUE POUR CHANGER D'ONGLET
+      function activateTab(targetId) {
+        // 1. On nettoie l'état précédent
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanels.forEach(p => p.classList.remove('active'));
 
-      // 2. On active les nouveaux éléments
-      const btn = document.querySelector(`.sidebar-nav button[data-tab="${targetId}"]`);
-      const panel = document.getElementById('tab-' + targetId);
-      
-      if (btn && panel) {
-        btn.classList.add('active');
-        panel.classList.add('active');
+        // 2. On active les nouveaux éléments
+        const btn = document.querySelector(`.sidebar-nav button[data-tab="${targetId}"]`);
+        const panel = document.getElementById('tab-' + targetId);
+
+        if (btn && panel) {
+          btn.classList.add('active');
+          panel.classList.add('active');
+        }
       }
-    }
 
-    // GESTION DES CLICS MANUELS SUR LA SIDEBAR
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        const id = this.dataset.tab;
-        activateTab(id);
-        // On met à jour l'URL proprement pour que le lien soit partageable
-        history.pushState(null, null, '#' + id);
-        // Scroll vers le haut du contenu
-        window.scrollTo({ top: document.querySelector('h1').offsetTop - 80, behavior: 'smooth' });
+      // GESTION DES CLICS MANUELS SUR LA SIDEBAR
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const id = this.dataset.tab;
+          activateTab(id);
+          // On met à jour l'URL proprement pour que le lien soit partageable
+          history.pushState(null, null, '#' + id);
+          // Scroll vers le haut du contenu
+          window.scrollTo({ top: document.querySelector('h1').offsetTop - 80, behavior: 'smooth' });
+        });
       });
-    });
 
-    // LA FONCTION QUI "ECOUTE" L'URL (Arrivée depuis Acteurs ou changement manuel)
-    function handleRouting() {
-      const hash = window.location.hash.substring(1); // récupère "noeud1", "noeud2", etc.
-      if (hash && document.getElementById('tab-' + hash)) {
-        activateTab(hash);
+      // LA FONCTION QUI "ECOUTE" L'URL (Arrivée depuis Acteurs ou changement manuel)
+      function handleRouting() {
+        const hash = window.location.hash.substring(1); // récupère "noeud1", "noeud2", etc.
+        if (hash && document.getElementById('tab-' + hash)) {
+          activateTab(hash);
+        }
       }
-    }
 
-    // On l'exécute au chargement et à chaque changement d'URL
-    window.addEventListener('load', handleRouting);
-    window.addEventListener('hashchange', handleRouting);
+      // On l'exécute au chargement et à chaque changement d'URL
+      window.addEventListener('load', handleRouting);
+      window.addEventListener('hashchange', handleRouting);
 
-  })();
-</script>
+    })();
+  </script>
 </body>
 
 </html>
