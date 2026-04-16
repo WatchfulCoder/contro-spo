@@ -941,5 +941,35 @@ footer {
   h2 { font-size: 1.4rem; }
 }
 
+/* Conteneur des blocs d'arguments */
+.argument-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
 
+/* Style des encadrés */
+.argument-box {
+  flex: 1; /* Distribue l'espace équitablement */
+  background-color: #f8f9fa;
+  border-left: 4px solid #2ecc71; /* Couleur du camp Pearltrees */
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.argument-box h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive : empiler sur petits écrans */
+@media (max-width: 768px) {
+  .argument-container {
+    flex-direction: column;
+  }
+}
 
