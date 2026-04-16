@@ -1601,49 +1601,52 @@
 
   <script src="script.js"></script>
   <script>
-    (function () {
-      var tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
-      var tabPanels = document.querySelectorAll('.tab-panel');
-      var contentTop = document.querySelector('.tabs');
+  (function () {
+    const tabBtns = document.querySelectorAll('.sidebar-nav button[data-tab]');
+    const tabPanels = document.querySelectorAll('.tab-panel');
 
-      tabBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var target = btn.dataset.tab;
+    // FONCTION UNIQUE POUR CHANGER D'ONGLET
+    function activateTab(targetId) {
+      // 1. On nettoie l'état précédent
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
 
-          tabBtns.forEach(function (b) { b.classList.remove('active'); });
-          tabPanels.forEach(function (p) { p.classList.remove('active'); });
-
-          btn.classList.add('active');
-          var panel = document.getElementById('tab-' + target);
-          if (panel) panel.classList.add('active');
-
-          // Scroll vers le haut du contenu (h1) à chaque changement de noeud
-          var top = document.querySelector('h1').getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        });
-      });
-
-    // GESTION DE L'ARRIVÉE DEPUIS UNE AUTRE PAGE (ex: depuis acteurs.html)
-    function checkHash() {
-      var hash = window.location.hash.substring(1);
-      if (hash && document.getElementById('tab-' + hash)) {
-        switchTab(hash, false); // On change l'onglet sans ré-écrire le hash
-        
-        // Petit délai pour laisser le temps au navigateur de charger avant de scroller
-        setTimeout(function() {
-          var top = document.querySelector('h1').getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        }, 50);
+      // 2. On active les nouveaux éléments
+      const btn = document.querySelector(`.sidebar-nav button[data-tab="${targetId}"]`);
+      const panel = document.getElementById('tab-' + targetId);
+      
+      if (btn && panel) {
+        btn.classList.add('active');
+        panel.classList.add('active');
       }
     }
 
-    // On vérifie au chargement et si l'utilisateur utilise les flèches retour du navigateur
-    window.addEventListener('load', checkHash);
-    window.addEventListener('popstate', checkHash);
+    // GESTION DES CLICS MANUELS SUR LA SIDEBAR
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const id = this.dataset.tab;
+        activateTab(id);
+        // On met à jour l'URL proprement pour que le lien soit partageable
+        history.pushState(null, null, '#' + id);
+        // Scroll vers le haut du contenu
+        window.scrollTo({ top: document.querySelector('h1').offsetTop - 80, behavior: 'smooth' });
+      });
+    });
+
+    // LA FONCTION QUI "ECOUTE" L'URL (Arrivée depuis Acteurs ou changement manuel)
+    function handleRouting() {
+      const hash = window.location.hash.substring(1); // récupère "noeud1", "noeud2", etc.
+      if (hash && document.getElementById('tab-' + hash)) {
+        activateTab(hash);
+      }
+    }
+
+    // On l'exécute au chargement et à chaque changement d'URL
+    window.addEventListener('load', handleRouting);
+    window.addEventListener('hashchange', handleRouting);
 
   })();
-    
-  </script>
+</script>
 </body>
 
 </html>
